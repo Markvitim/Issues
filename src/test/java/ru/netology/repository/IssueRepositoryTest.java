@@ -9,7 +9,6 @@ import java.util.Collection;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class IssueRepositoryTest {
     private IssueRepository repository = new IssueRepository();
@@ -76,11 +75,4 @@ class IssueRepositoryTest {
         Collection<Issue> actual = repository.findById(8);
         assertEquals(expected, actual);
     }
-
-    @Test
-    public void shouldSetOpenClose() {
-        repository.setOpenClose(1);
-        assertTrue(true);
-    }
-
 }

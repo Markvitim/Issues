@@ -20,6 +20,7 @@ public class Issue implements Comparable<Issue> {
         this.open = open;
     }
 
+
     public int getId() {
         return id;
     }

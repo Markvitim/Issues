@@ -3,10 +3,12 @@ package ru.netology.manager;
 import ru.netology.domain.Issue;
 import ru.netology.repository.IssueRepository;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 public class IssueManager {
     private IssueRepository repository = new IssueRepository();
+
 
     public IssueManager() {
     }
@@ -56,6 +58,14 @@ public class IssueManager {
     }
 
     public void setOpenClose(int id) {
-        repository.setOpenClose(id);
+        Collection<Issue> items = new ArrayList<>();
+        for (Issue item : items) {
+            if (item.getId() == id && item.isOpen() == true) {
+                item.setOpen(false);
+            }
+            if (item.getId() == id && item.isOpen() == false) {
+                item.setOpen(true);
+            }
+        }
     }
 }

@@ -39,15 +39,4 @@ public class IssueRepository {
         }
         return result;
     }
-
-    public void setOpenClose(int id) {
-        for (Issue item : items) {
-            if (item.getId() == id && item.isOpen() == true) {
-                item.setOpen(false);
-            }
-            if (item.getId() == id && item.isOpen() == false) {
-                item.setOpen(true);
-            }
-        }
-    }
 }

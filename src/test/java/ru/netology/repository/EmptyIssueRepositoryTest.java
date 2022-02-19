@@ -8,7 +8,6 @@ import java.util.Collection;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class EmptyIssueRepositoryTest {
     private IssueRepository repository = new IssueRepository();
@@ -45,11 +44,5 @@ public class EmptyIssueRepositoryTest {
         Collection<Issue> expected = List.of();
         Collection<Issue> actual = repository.findById(8);
         assertEquals(expected, actual);
-    }
-
-    @Test
-    public void shouldSetOpenClose() {
-        repository.setOpenClose(1);
-        assertFalse(false);
     }
 }
